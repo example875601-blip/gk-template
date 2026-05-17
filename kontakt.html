@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - MajsterBud Wykończenia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo" id="logo-kontakt">Majster<span>Bud</span></div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html#start">Start</a></li>
+                    <li><a href="index.html#uslugi">Nasze Usługi</a></li>
+                    <li><a href="index.html#galeria">Galeria</a></li>
+                    <li><a href="kontakt.html">Napisz do nas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contact-page">
+        <div class="form-container">
+            <h2>Formularz Kontaktowy</h2>
+            <p>Wypełnij formularz, a oddzwonimy z darmową wyceną Twojego projektu!</p>
+            <form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
+                <input type="hidden" name="access_key" value="ZMIEN_NA_SWOJ_KLUCZ">
+                <div class="form-group">
+                    <label for="name">Imię i Nazwisko *</label>
+                    <input type="text" id="name" name="name" required placeholder="np. Jan Kowalski">
+                </div>
+                <div class="form-group">
+                    <label for="email">Adres E-mail *</label>
+                    <input type="email" id="email" name="email" required placeholder="np. jan@kowalski.pl">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Numer telefonu</label>
+                    <input type="tel" id="phone" name="phone" placeholder="np. 123 456 789">
+                </div>
+                <div class="form-group">
+                    <label for="service">Interesująca Cię usługa</label>
+                    <select id="service" name="service">
+                        <option value="Szpachlowanie i Malowanie">Szpachlowanie i Malowanie</option>
+                        <option value="Układanie Płytek / Gresu">Układanie Płytek / Gresu</option>
+                        <option value="Zabudowy G-K / Sufity">Zabudowy G-K / Sufity</option>
+                        <option value="Montaż Podłóg">Montaż Podłóg</option>
+                        <option value="Inne / Kompleksowe wykończenie">Inne / Kompleksowe wykończenie</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Opisz krótko swój projekt *</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Wpisz metraż, lokalizację lub dodatkowe wymagania..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-submit">Wyślij zgłoszenie</button>
+            </form>
+            <div id="form-status"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 MajsterBud Wykończenia Wnętrz. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

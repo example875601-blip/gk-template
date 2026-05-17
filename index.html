@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solidne Wykończenia - Twój Dom w Dobrych Rękach</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Netlify Identity Widget (Wymagany do logowania) -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+    <!-- Górny pasek funkcji -->
+    <header>
+        <div class="nav-container">
+            <div class="logo" id="logo">Majster<span>Bud</span></div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html#start">Start</a></li>
+                    <li><a href="index.html#uslugi">Nasze Usługi</a></li>
+                    <li><a href="index.html#galeria">Galeria</a></li>
+                    <li><a href="kontakt.html">Napisz do nas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sekcja główna -->
+    <section id="start" class="hero">
+        <h1>Wykończenia Wnętrz na Najwyższym Poziomie</h1>
+        <p>Realizujemy marzenia o pięknym i funkcjonalnym mieszkaniu. Szybko, czysto i z dbałością o każdy detal.</p>
+        <a href="kontakt.html" class="btn">Darmowa Wycena</a>
+    </section>
+
+    <!-- Sekcja Usług -->
+    <section id="uslugi" class="services">
+        <h2>Co możemy dla Ciebie zrobić?</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Szpachlowanie i Malowanie</h3>
+                <p>Idealnie gładkie ściany przygotowane pod każdą aranżację. Używamy profesjonalnych agregatów malarskich.</p>
+            </div>
+            <div class="service-card">
+                <h3>Układanie Płytek i Gresu</h3>
+                <p>Precyzyjne flizowanie łazienek, kuchni oraz salonów. Docinanie krawędzi pod kątem 45 stopni to dla nas standard.</p>
+            </div>
+            <div class="service-card">
+                <h3>Zabudowy G-K i Sufity Podwieszane</h3>
+                <p>Nowoczesne konstrukcje z płyt gipsowo-kartonowych, ścianki działowe oraz fantazyjne podświetlenia LED.</p>
+            </div>
+            <div class="service-card">
+                <h3>Montaż Podłóg</h3>
+                <p>Układanie paneli laminowanych, winylowych oraz deski trójwarstwowej wraz z eleganckim wykończeniem listwami.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sekcja Galerii -->
+    <section id="galeria" class="gallery-section">
+        <h2>Nasze Realizacje</h2>
+        <p class="section-subtitle">Zdjęcia z naszych ostatnich projektów (Zarządzane z telefonu)</p>
+        
+        <div class="gallery-grid" id="cms-gallery">
+            <p style="text-align: center; grid-column: 1/-1; color: #7f8c8d;">Ładowanie zdjęć z panelu administracyjnego...</p>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" src="" alt="Podgląd">
+        <div id="lightbox-caption"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 MajsterBud Wykończenia Wnętrz. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+</body>
+</html>
